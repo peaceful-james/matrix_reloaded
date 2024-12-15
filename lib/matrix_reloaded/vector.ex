@@ -114,7 +114,7 @@ defmodule MatrixReloaded.Vector do
   def add(vec1, vec2) do
     if size(vec1) == size(vec2) do
       [vec1, vec2]
-      |> List.zip()
+      |> Enum.zip()
       |> Enum.map(fn {x, y} -> x + y end)
       |> Result.ok()
     else
@@ -143,7 +143,7 @@ defmodule MatrixReloaded.Vector do
   def sub(vec1, vec2) do
     if size(vec1) == size(vec2) do
       [vec1, vec2]
-      |> List.zip()
+      |> Enum.zip()
       |> Enum.map(fn {x, y} -> x - y end)
       |> Result.ok()
     else
@@ -172,7 +172,7 @@ defmodule MatrixReloaded.Vector do
   def dot(vec1, vec2) do
     if size(vec1) == size(vec2) do
       [vec1, vec2]
-      |> List.zip()
+      |> Enum.zip()
       |> Enum.map(fn {x, y} -> x * y end)
       |> Enum.sum()
       |> Result.ok()
@@ -204,7 +204,7 @@ defmodule MatrixReloaded.Vector do
   def inner_product(vec1, vec2) do
     if size(vec1) == size(vec2) do
       [vec1, vec2]
-      |> List.zip()
+      |> Enum.zip()
       |> Enum.map(fn {x, y} -> x * y end)
       |> Result.ok()
     else
